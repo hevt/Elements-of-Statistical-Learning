@@ -1,0 +1,15 @@
+#+title: Chapter 14.3 Cluster Analysis
+#+author: Hari Tiwari
+#+date:<2023-08-06 Sun>
+
+* 14.3: Cluster Analysis Overview
+We refer to the idea of segmenting data into a particular order as *Cluster Analysis*. We can describe these objects with a set of measurements or by their relationship to other objects in the superset. Sometimes we wish to rearrange these groups or *clusters* into some kind of *hierarchy*. We can do this by successively grouping clusters together such that at each level of the hierarchy, clusters within the same group are more *similar* to each other than to clusters outside that group.
+
+We can use cluster analysis to form *descriptive statistics*, to measure the distinctness of subgroups in the set, and to form an idea of if and how they have substantially different properties. To do this, we need to quantize an idea of *difference* between objects in the dataset, whether they be numeric or otherwise. We call this idea *similarity/dissimilarity*.
+
+Our clustering methods will attempt to group objects based on the similarity metric we supply to it. This is similar to how we specified loss and cost functions in prediction problems (unsupervised learning). In both these cases, the idea of "cost" and "similarity" is dependent on the type of our data.
+
+* 14.3.1: Proximity Matrices
+One of the representations for our data is a *proximity matrix*. This concretizes an idea of proximity, or the *affinity* between pairs of objects. These can be either similarities or dissimilarities. We quantize our idea of difference for the particular dataset and put entries into a N x N matrix D, where N is the number of objects, and each element d_ij represents the difference between the ith and jth objects, where our diagonal entries are zero because it is the difference between an object and itself. Most algorithms assume symmetric dissimilarity matrices where d_ij = d_ji, but this may not always be the case! If the matrix is asymmetric we must convert it with (D + D^T)/2, which is to say we take the mean of the original matrix and its transpose to uniformize it. Algorithms that assume *distances* cannot be used with datasets where dissimilarity judgements are *subjective*, as the *triangle inequality* d_ij <= d_ik + d_kj may not hold with subjective differences.
+
+* 14.3.2.: Dissimilarities based on Attributes

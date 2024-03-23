@@ -1,0 +1,42 @@
+#+title: Chapter 3: Linear Methods for Regression
+#+author: Hari Tiwari
+#+date_created:<2023-08-14 Mon>
+#+date_modified:<2024-03-21 Thu>
+
+* 3.1: Introduction
+* 3.2: Linear Regression Models and Least Squares
+*** Overview of LR and LS
+**** Suppose we have an input vector X^T = (X1, X2, X3...) and want to predict a real valued output Y. The linear regression model has the form f(X) = Beta0 + Summa[j=1, p](Xj, Betaj).
+**** Note: The linear model assumes that the regression function E(Y|X) is linear, or that the linear model is a reasonable approximation. The Betaj's are unknown parameters or coefficients , and the variables Xj can come from different sources:
+1. Quantitative inputs
+2. Transformations of quantitative inputs, such as log, square root, or square.
+3. Basis expansions such as Xj = Xi^2, leading to a polynomial representation.
+4. Numeric or "dummy" coding of the levels of of qualitative inputs. For example, if G is a five-level factor input, we might create Xj, j=1...5, such that Xj=I(G=j)
+
+** 3.2.1: Example: Prostate Cancer
+** 3.2.2: The Gauss Markov Theorem
+** 3.2.3: Multiple Regression from Simple Univariate Regression
+** 3.2.4: Multiple Outputs
+* 3.3: Subset Selection
+** 3.3.1: Best-Subset Selection
+** 3.3.2: Forward- and Backward-Stepwise Selection
+** 3.3.3: Forward-Stagewise Regression
+** 3.3.4: Prostate Cancer Data Example (Continued)
+* 3.4: Shrinkage Methods
+** 3.4.1: Ridge Regression
+** 3.4.2: The Lasso
+** 3.4.3: Discussion: Subset Selection, Ridge Regression and Lasso
+** 3.4.4: Least Angle Regression
+* 3.5: Methods Using Derived Input Directions
+** 3.5.1: Principal Components Regression
+** 3.5.2: Partial Least Squares
+* 3.6: Discussion: A Comparison of the Selection and Shrinkage Methods
+* 3.7: Multiple Outcome Shrinkage and Selection
+* 3.8: More on the Lasso and Related Path Algorithms
+** 3.8.1: Incremental Forward Stagewise Regression
+** 3.8.2: Piecewise-Linear Path Algorithms
+** 3.8.3: The Dantzig Selector
+** 3.8.4: The Grouped Lasso
+** 3.8.5: Further Properties of the Lasso
+** 3.8.6: Pathwise Coordinate Optimization
+* 3.9: Computational Considerations
