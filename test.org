@@ -1,4 +1,0 @@
-#+title: Test
-#+author: Hari Tiwari
-#+date_created:<2024-03-24 Sun>
-#+date_modified:<2024-03-24 Sun>
